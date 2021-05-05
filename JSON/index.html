@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>replt.it</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1>Learning JSON</h1>
+
+        <script>
+            /*Note JSON is valid javaScript*/
+        // by adding `` turn json into string
+        let students =  `[
+                            {
+                                "name": "Andrew",
+                                "age": 27,
+                                "height": 165
+                            },
+                            {
+                                "name": "Isaac",
+                                "age": 35,
+                                "height": 160
+                            }
+                        ]`
+
+            // passing the file you want to parse (students)
+            console.log(JSON.parse(students));
+            
+            // getting the first and second seconds students manually
+            console.log(JSON.parse(students)[0]);
+            console.log(JSON.parse(students)[1]);
+
+            // ask for students name or age
+            console.log(JSON.parse(students)[0].name);
+            console.log(JSON.parse(students)[1].age);
+        </script>
+    </body>
+</html>
