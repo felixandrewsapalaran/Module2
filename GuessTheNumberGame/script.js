@@ -1,7 +1,7 @@
 /**
  * Guess The Number Game
  * DONE: Get user value from input and save it to variable numberGuess
- * TODO: Generate a random number 1 to 100 and save it to variable correctNumber
+ * DONE: Generate a random number 1 to 100 and save it to variable correctNumber
  * TODO: Console whether the guess is too high, too low, or is correct inside playGame function
  * TODO: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * TODO: Complete the showYouWon, showNumberAbove, showNumberBelow
@@ -13,7 +13,9 @@
 
 // Variable to store the list of guesses 
 
-// Variable for store the correct random number 
+// Variable for store the correct random number
+let correctNumber = getRandomNumber();
+console.log(correctNumber);
 
 
 window.onload = function() {
@@ -28,7 +30,7 @@ function playGame(){
   // *CODE GOES BELOW HERE *
   // .value allows us to get the value of this id input
   let numberGuess = document.getElementById('number-guess').value;
-  console.log(numberGuess) // check if we get the value
+  console.log(numberGuess); // check if we get the value
 }
 
 /**
@@ -60,6 +62,25 @@ function resetResultContent(){
  */
 function getRandomNumber(){
   // *CODE GOES BELOW HERE *
+
+  /*
+        Math.random returns a number between 0 inclusive
+        and 1 exclusive e.g(0.21435123 - 0.999999) and that's
+        why we multiply it by 100 and add 1 incase the random 
+        number is 0 then adding 1 is the lowest we can generate
+    */
+
+    // let randomNumber = Math.random();
+    // console.log(randomNumber);
+    // //Math.floor rounds down
+    // let wholeNumber =  Math.floor(randomNumber * 100);
+    // console.log(wholeNumber);
+    // let add1 = wholeNumber + 1;
+    // console.log(add1);
+
+        // this generate random number from 0 to 99 in order to make it 0 to 100 add 1 at the end
+        return Math.floor((Math.random() * 100) + 1)
+
 }
 
 /**
