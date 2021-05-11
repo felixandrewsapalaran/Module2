@@ -5,7 +5,7 @@
  * DONE: Console whether the guess is too high, too low, or is correct inside playGame function
  * DONE: Create a function called displayResult to move the logic for if the guess is too high, too low, or correct
  * DONE: Complete the showYouWon, showNumberAbove, showNumberBelow
- * TODO: Use the showYouWon... functions within displayResult to display the correct dialog
+ * DONE: Use the showYouWon... functions within displayResult to display the correct dialog
  * TODO: Save the guess history in a variable called guess
  * TODO: Display the guess history using displayHistory() function
  * TODO: Use the initGame() function to restart the game
@@ -44,11 +44,15 @@ function playGame(){
 // *CODE GOES BELOW HERE *
 function displayResult(numberGuess) {
     if (numberGuess > correctNumber) {
-        console.log(numberGuess, "Too high")
+        //console.log(numberGuess, "Too high")
+        showNumberAbove()
     }else if (numberGuess < correctNumber) {
-        console.log(numberGuess, "Too Low")
+        //console.log(numberGuess, "Too Low")
+        showNumberBelow()
     }else {
-        console.log("You got it!")
+        //console.log("You got it!")
+        showYouWon()
+
     }
 }
 
